@@ -2,6 +2,8 @@ echo "Welcome to Employee Wage Computation Program"
 WagePerHour=20
 FullDayHour=8
 PartimeHour=4
+for (( i=1; i<=20; i++ ))
+do
 attendance=$((RANDOM%2))
 partime=$((RANDOM%2))
 case $attendance in
@@ -21,3 +23,4 @@ case $attendance in
 		echo "Invalid Entry"
 		;;
 esac
+done
