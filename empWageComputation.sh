@@ -3,7 +3,7 @@ WagePerHour=20
 FullDayHour=8
 PartimeHour=4
 days=0
-while [[ $days -ne 20 && $hours -ne 100 ]]
+while [[ $days -ne 20 && $Totalhours -ne 100 ]]
 do
 attendance=$((RANDOM%2))
 partime=$((RANDOM%2))
@@ -22,10 +22,11 @@ case $attendance in
 		;;
 	0)
 		echo "Employee is Absent"
-		Hours=0	
+		Hours=0
 		;;
 	*)
 		echo "Invalid Entry"
 		;;
 esac
+Totalhours=`expr $Totalhours + $Hours`
 done
